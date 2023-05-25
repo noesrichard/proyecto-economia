@@ -1,0 +1,87 @@
+{
+  "banks": [
+    {
+      "id": 1,
+      "name": "Banco Pichincha",
+      "educacion": 14,
+      "micro": 10,
+      "hipo": 5,
+      "consumo": "16.77",
+      "educacionPlazo": "1",
+      "microPlazo": "1",
+      "hipoPlazo": "1",
+      "consumoPlazo": "12"
+    },
+    {
+      "id": 2,
+      "name": "Banco Guayaquil",
+      "educacion": 14,
+      "micro": 10,
+      "hipo": "8",
+      "consumo": 10,
+      "educacionPlazo": 10,
+      "microPlazo": 10,
+      "hipoPlazo": 10,
+      "consumoPlazo": 10
+    },
+    {
+      "id": 3,
+      "name": "ProduBanco",
+      "educacion": "12",
+      "micro": "12",
+      "hipo": "12",
+      "consumo": "12",
+      "educacionPlazo": "12",
+      "microPlazo": "1222",
+      "hipoPlazo": "12",
+      "consumoPlazo": "12"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "username": "admin",
+      "password": "admin",
+      "rol": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Richard",
+      "username": "richard",
+      "password": "richard",
+      "rol": "user"
+    },
+    {
+      "id": 3,
+      "name": "Richard",
+      "username": "pichi",
+      "password": "pichi",
+      "rol": "asesor",
+      "bankId": 1
+    },
+    {
+      "id": 4,
+      "name": "David",
+      "username": "gye",
+      "password": "gye",
+      "rol": "asesor",
+      "bankId": 2
+    },
+    {
+      "id": 5,
+      "name": "Test",
+      "username": "test",
+      "password": "test",
+      "rol": null
+    },
+    {
+      "id": 6,
+      "name": "Test",
+      "username": "test",
+      "password": "test",
+      "rol": "asesor",
+      "bankId": 3
+    }
+  ]
+}
