@@ -1,0 +1,75 @@
+<div style="padding-top: 25px;">
+<app-input
+  type="text"
+  label="Nombre"
+  [(value)]="bank.name"
+  *ngIf="isAdmin"
+    style="margin-left: 25px; width: 400px;"
+></app-input>
+<form>
+  <div class="column name-tasas">
+    <p style="text-align: center">Tasas</p>
+    <app-input
+      type="number"
+      label="%Tasa Educacion"
+      [(value)]="bank.educacion"
+    ></app-input>
+    <app-input
+      type="number"
+      label="%Tasa Micro"
+      [(value)]="bank.micro"
+    ></app-input>
+    <app-input
+      type="number"
+      label="%Tasa Hipo"
+      [(value)]="bank.hipo"
+    ></app-input>
+    <app-input
+      type="number"
+      label="%Tasa Consumo"
+      [(value)]="bank.consumo"
+    ></app-input>
+  </div>
+  <div class="column plazo">
+    <p style="text-align: center">Plazos</p>
+    <app-input
+      label="Plazo Educacion (meses)"
+      type="number"
+      [(value)]="bank.educacionPlazo"
+    ></app-input>
+    <app-input
+      type="number"
+      label="Plazo Micro (meses)"
+      [(value)]="bank.microPlazo"
+    ></app-input>
+    <app-input
+      type="number"
+      label="Plazo Hipo (meses)"
+      [(value)]="bank.hipoPlazo"
+    ></app-input>
+    <app-input
+      type="number"
+      label="Plazo Consumo (meses)"
+      [(value)]="bank.consumoPlazo"
+    ></app-input>
+  </div>
+</form>
+<div style="display: flex; justify-content: end; padding-right: 25px; margin-bottom: 25px;">
+  <button
+    mat-raised-button
+    color="warn"
+    (click)="onCancel.emit()"
+    *ngIf="cancelButton"
+  >
+    Cancelar
+  </button>
+  <button
+    mat-raised-button
+    (click)="handleSave()"
+    color="primary"
+    style="margin-left: 20px"
+  >
+    Guardar
+  </button>
+</div>
+</div>

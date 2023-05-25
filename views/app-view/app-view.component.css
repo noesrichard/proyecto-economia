@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.example-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+mat-drawer {
+  width: 15%;
+  padding: 10px;
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.buttons button{
+  margin-top: 10px;
+  width: 100%;
+}
+
+mat-drawer-content {
+  width: 85%;
+}
