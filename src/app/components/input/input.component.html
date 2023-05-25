@@ -1,0 +1,9 @@
+<mat-form-field appearance="outline">
+  <mat-label>{{ label }}</mat-label>
+  <input
+    [type]="type"
+    matInput
+    [(ngModel)]="value"
+    (input)="valueChange.emit(value)"
+  />
+</mat-form-field>
