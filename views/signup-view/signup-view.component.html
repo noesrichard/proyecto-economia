@@ -1,0 +1,48 @@
+<div class="back">
+  <div class="container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Registro</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="center">
+          <form>
+            <app-input
+              type="text"
+              label="Nombre"
+              [(value)]="user.name"
+            ></app-input>
+
+            <app-input
+              type="text"
+              label="Usuario"
+              [(value)]="user.username"
+            ></app-input>
+
+            <app-input
+              type="password"
+              label="Contraseña"
+              [(value)]="user.password"
+            ></app-input>
+
+            <app-input
+              type="password"
+              label="Repita la contraseña"
+              [(value)]="repeatPassword"
+            ></app-input>
+
+            <div class="buttons"></div>
+          </form>
+        </div>
+      </mat-card-content>
+      <mat-card-actions
+        align="end"
+        style="display: flex; flex-direction: column"
+      >
+        <button mat-raised-button (click)="handleSignup()" color="primary">
+          Registrarme
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

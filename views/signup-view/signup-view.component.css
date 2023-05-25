@@ -1,0 +1,28 @@
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.back{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

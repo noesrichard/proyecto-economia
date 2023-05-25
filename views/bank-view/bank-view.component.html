@@ -1,0 +1,11 @@
+<app-table
+  [rows]="banks"
+  [columns]="bankColumns"
+  (onEdit)="handleEdit($event)"
+  (onDelete)="handleDelete($event)"
+  (onNew)="handleNew()"
+
+  [newButton]="newButton"
+  [editButton]="editButton"
+  [deleteButton]="deleteButton"
+></app-table>
