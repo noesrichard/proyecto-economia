@@ -1,0 +1,35 @@
+<form>
+  <app-input type="text" label="Nombre" [(value)]="user.name"></app-input>
+
+  <app-input type="text" label="Usuario" [(value)]="user.username"></app-input>
+
+  <app-input type="text" label="Nombre" [(value)]="user.password"></app-input>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Banco</mat-label>
+    <mat-select [(ngModel)]="user.bankId" name="bank">
+      <mat-option *ngFor="let bank of banks" [value]="bank.id">
+        {{ bank.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
+
+<div style="display: flex; justify-content: end; padding-right: 25px; padding-bottom: 25px;">
+  <button
+    mat-raised-button
+    color="warn"
+    (click)="onCancel.emit()"
+    *ngIf="cancelButton"
+  >
+    Cancelar
+  </button>
+  <button
+    mat-raised-button
+    (click)="handleSave()"
+    color="primary"
+    style="margin-left: 20px;"
+  >
+    Guardar
+  </button>
+</div>
