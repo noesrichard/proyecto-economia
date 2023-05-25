@@ -1,0 +1,36 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <div class="title">
+      <h1>Sistemas de Amortizacion</h1>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="buttons">
+      <button routerLink="bancos" mat-raised-button color="primary" *ngIf="rol == 'admin'">
+        Bancos <mat-icon>ballot</mat-icon>
+      </button>
+      <button routerLink="asesores" mat-raised-button  color="primary"*ngIf="rol == 'admin'">
+        Asesores <mat-icon>person</mat-icon>
+      </button>
+
+      <button routerLink="configuracion" mat-raised-button  color="primary"*ngIf="rol == 'asesor'">
+        Configuracion <mat-icon>how_to_vote</mat-icon>
+      </button>
+
+      <button routerLink="simulador" mat-raised-button color="primary">
+        Simulacion <mat-icon>how_to_vote</mat-icon>
+      </button>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar color="primary">
+      <!-- <span>Sistemas de Amortización</span> -->
+      <span class="example-spacer"></span>
+      <span>{{ name + " (" + username + ") " }}</span>
+      &nbsp; &nbsp;
+      <span *ngIf="rol == 'asesor'">{{ bankName }}</span>
+      &nbsp; &nbsp;
+      <button mat-raised-button (click)="logout()">Salir</button>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
