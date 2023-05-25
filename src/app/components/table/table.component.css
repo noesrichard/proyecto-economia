@@ -1,0 +1,17 @@
+.table-container{
+  background: white;
+  padding: 20px;
+}
+
+.search-bar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center{
+  padding-top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
