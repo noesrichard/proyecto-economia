@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="form">
+    <h2 *ngIf="rol == 'asesor'">{{ bankName }}</h2>
+    <app-input label="Nombre" [(value)]="simulation.name"></app-input>
+    <app-input
+      label="Cantidad"
+      type="number"
+      [(value)]="simulation.cantidad"
+    ></app-input>
+    <app-input
+      label="Seguro"
+      type="number"
+      [(value)]="simulation.seguro"
+    ></app-input>
+    <mat-form-field appearance="outline">
+      <mat-label>Sistema</mat-label>
+      <mat-select
+        [(ngModel)]="simulation.type"
+        name="type"
+        [disabled]="simulation.cantidad == null"
+      >
+        <mat-option value="aleman">Aleman</mat-option>
+        <mat-option value="frances">Frances</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" *ngIf="rol != 'asesor'">
+      <mat-label>Banco</mat-label>
+      <mat-select
+        [ngModel]="simulation.bank"
+        (ngModelChange)="handleBankChange($event)"
+        name="bank"
+        [disabled]="simulation.type == null"
+      >
+        <mat-option *ngFor="let bank of banks" [value]="bank.id">
+          {{ bank.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Tipo de credito</mat-label>
+      <mat-select
+        [ngModel]="simulation.credit"
+        (ngModelChange)="handleCreditChange($event)"
+        name="credit"
+        [disabled]="simulation.bank == null"
+      >
+        <mat-option [value]="credit.id" *ngFor="let credit of creditOptions; let i = index"
+          >{{ credit.name }} ({{ credit.tasa }}%)</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+
+    Plazo maximo: {{ maxValue }}
+    <mat-form-field appearance="outline" style="margin-top: 10px">
+      <mat-label>Plazo (Meses)</mat-label>
+      <input
+        [disabled]="simulation.credit == null"
+        type="number"
+        matInput
+        [(ngModel)]="simulation.plazo"
+        [max]="maxValue"
+        [min]="1"
+      />
+    </mat-form-field>
+
+    <button mat-raised-button (click)="handleCal()" color="primary">
+      Calcular
+    </button>
+    &nbsp;
+    <button mat-raised-button (click)="imprimir()" color="info">Guardar</button>
+  </div>
+  <div class="tabla">
+    <app-table
+      [rows]="sistema"
+      [columns]="columns"
+
+      [newButton]="false"
+      [editButton]="false"
+      [deleteButton]="false"
+      [showPaginator]="false"
+      [sorting]="false"
+      [search]="false"
+    ></app-table>
+  </div>
+</div>

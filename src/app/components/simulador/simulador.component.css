@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  height: 91%;
+}
+
+.form {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin: 10px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 1rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+
+mat-form-field {
+  width: 215px;
+}
+
+.tabla {
+  width: 100%;
+}
