@@ -1,6 +1,5 @@
-# Loan Management System
-
-This project is an Angular application designed to manage loans, deadlines, and taxes. It provides functionality for three types of users: admin, assessors, and users. The admin user has the authority to create banks and assign assessors. Assessors are responsible for managing tax values and deadlines, while users can utilize the loan simulation feature. The simulation feature allows users to view a table displaying the payment schedule for two amortization systems: German and French.
+# Amortization Table System
+This project is an Angular application designed to generate amortization tables for loans. The system provides two different amortization systems: German and French. Users can simulate loans by inputting the loan amount, interest rate, and duration, and the application will generate a table displaying the payment schedule.
 
 ## Getting Started
 
